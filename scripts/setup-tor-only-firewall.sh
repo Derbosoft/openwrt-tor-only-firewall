@@ -15,8 +15,8 @@ API_URL="https://onionoo.torproject.org/details?running=true&fields=or_addresses
 # FIX: nftables n'existe pas comme paquet seul sur OpenWrt,
 #      kmod-nft-core suffit (fw4 fournit déjà nft)
 echo "[*] Installation des paquets requis"
-opkg update
-opkg install curl jq kmod-nft-core ca-bundle >/dev/null
+apk update
+apk install curl jq kmod-nft-core ca-bundle >/dev/null
 
 # ---- 2) Nettoyage ancien état
 echo "[*] Nettoyage ancienne config Tor (si présente)"
